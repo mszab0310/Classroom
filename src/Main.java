@@ -9,6 +9,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        //could've used a factory pattern for all of these
         Student student1 = new Student(1,"Jimmy","2001:03:05");
         Student student2 = new Student(2,"Jimmy2","2001:03:06");
         Student student3 = new Student(3,"Jimmy3","2001:03:07");
