@@ -1,7 +1,7 @@
 public abstract class Person {
-    int id;
-    String name;
-    String birthDate;
+    protected int id;
+    protected String name;
+    protected String birthDate;
     public abstract int getId();
     public abstract String getName();
     public abstract String getBirthDate();

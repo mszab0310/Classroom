@@ -4,6 +4,12 @@ public class Teacher extends  Person{
         return this.id;
     }
 
+    public Teacher(int id, String name, String birthDate) {
+        this.id = id;
+        this.name = name;
+        this.birthDate = birthDate;
+    }
+
     @Override
     public String getName() {
         return this.name;

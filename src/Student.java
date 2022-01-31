@@ -1,5 +1,11 @@
 public class Student extends  Person{
 
+    public Student(int id, String name, String birthDate) {
+        this.id = id;
+        this.name = name;
+        this.birthDate = birthDate;
+    }
+
     @Override
     public int getId() {
         return this.id;
