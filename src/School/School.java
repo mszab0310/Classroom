@@ -74,8 +74,68 @@ public class School {
         }
         int count = 0;
         double sum = 0.0;
-
-
-        return 0.0;
+        for(Grade grade : catalogStudent.getGrades()){
+            if(grade.getStudent().equals(student)){
+                count++;
+                sum += grade.getValue();
+            }
+        }
+        if(count == 0) {
+            System.out.println("No grades for student");
+            return -3;
+        }
+        return sum/(double) count;
     }
+
+    public double calculateClassGradeAverage(Class classs){
+        Catalog searchedCatalog = null;
+        for(Catalog catalog : catalogs){
+            if(catalog.getClassName().equals(classs)){
+                searchedCatalog = catalog;
+            }
+        }
+        if(searchedCatalog == null){
+            System.out.println("No such class");
+            return -1;
+        }
+        int count = 0;
+        double sum = 0.0;
+        for(Grade grade : searchedCatalog.getGrades()){
+            count++;
+            sum += grade.getValue();
+        }
+        if(count == 0){
+            System.out.println("No grades for class");
+            return -2;
+        }
+        return sum/(double)count;
+    }
+
+    public double calculateClassGradeAverageForSubject(Class classs, Subject subject){
+        Catalog searchedCatalog = null;
+        for(Catalog catalog : catalogs){
+            if(catalog.getClassName().equals(classs)){
+                searchedCatalog = catalog;
+            }
+        }
+        if(searchedCatalog == null){
+            System.out.println("No such class");
+            return -1;
+        }
+        int count = 0;
+        double sum = 0.0;
+        for(Grade grade : searchedCatalog.getGrades()){
+            if(grade.getSubject().equals(subject)) {
+                count++;
+                sum += grade.getValue();
+            }
+        }
+        if(count == 0){
+            System.out.println("No grades for subject in class");
+            return -2;
+        }
+        return sum/(double)count;
+    }
+
+
 }
