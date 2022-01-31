@@ -1,4 +1,8 @@
-public class Student extends  Person{
+package Person;
+
+import Person.Person;
+
+public class Student extends Person {
 
     public Student(int id, String name, String birthDate) {
         this.id = id;

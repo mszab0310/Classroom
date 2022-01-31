@@ -1,3 +1,5 @@
+package School;
+
 public enum Subject {
     MATH,
     ENGLISH,

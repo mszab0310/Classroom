@@ -1,4 +1,8 @@
-public class Teacher extends  Person{
+package Person;
+
+import Person.Person;
+
+public class Teacher extends Person {
     @Override
     public int getId() {
         return this.id;
