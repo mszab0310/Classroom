@@ -6,10 +6,19 @@ public class Catalog {
     private int id;
     private Class className;
     ArrayList<Grade> grades;
+    ArrayList<Absence> absences;
 
     public Catalog(int id, Class className) {
         this.id = id;
         this.className = className;
+    }
+
+    public ArrayList<Absence> getAbsences() {
+        return absences;
+    }
+
+    public void setAbsences(ArrayList<Absence> absences) {
+        this.absences = absences;
     }
 
     public ArrayList<Grade> getGrades() {
@@ -18,6 +27,10 @@ public class Catalog {
 
     public void addGrade(Grade grade){
         grades.add(grade);
+    }
+
+    public void addAbsence(Absence absence){
+        absences.add(absence);
     }
 
     public void setGrades(ArrayList<Grade> grades) {
